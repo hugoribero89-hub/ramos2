@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramos Soluções Financeiras</title>
+  <meta name="description" content="Ramos Soluções Financeiras – Crédito, financiamentos e consultoria financeira com segurança e agilidade." />
+
+  <style>
+    :root {
+      --red: #d71920;
+      --dark: #1f2933;
+      --gray: #6b7280;
+      --light: #f9fafb;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .header-content img {
+      height: 68px;
+    }
+
+    .btn {
+      background: var(--red);
+      color: var(--white);
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #d71920, #b9151b);
+      color: var(--white);
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      gap: 40px;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .form-section {
+      background: var(--white);
+    }
+
+    form {
+      max-width: 700px;
+      margin: auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--white);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: var(--gray);
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-content">
+    <img src="ramos-logo.jpeg" alt="Ramos Soluções Financeiras">
+    <a href="#levantamento" class="btn">Levantamento</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <h1>Ramos Soluções Financeiras</h1>
+      <p>Crédito, financiamentos e consultoria financeira com segurança, transparência e rapidez.</p>
+      <a href="#levantamento" class="btn">Iniciar Levantamento</a>
+    </div>
+  </div>
+</section>
+
+<section id="levantamento" class="form-section">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:30px;">Levantamento de Informações</h2>
+
+    <form>
+      <label>1. Nome completo</label>
+      <input required>
+
+      <label>2. CPF</label>
+      <input required>
+
+      <label>3. RG</label>
+      <input required>
+
+      <label>20. Data de nascimento</label>
+      <input type="date" required>
+
+      <label>21. Profissão</label>
+      <input required>
+
+      <label>22. Renda bruta</label>
+      <input placeholder="Ex: R$ 2.500,00" required>
+
+      <label>23. Renda familiar</label>
+      <input placeholder="Ex: R$ 4.000,00" required>
+
+      <label>24. Número para contato</label>
+      <input placeholder="(DDD) 9XXXX-XXXX" required>
+
+      <label>25. E-mail</label>
+      <input type="email" required>
+
+      <label>26. Escolaridade</label>
+      <input required>
+
+      <label>27. Estado civil</label>
+      <input required>
+
+      <label>28. Naturalidade</label>
+      <input required>
+
+      <label>29. Endereço atual</label>
+      <textarea rows="3" required></textarea>
+
+      <button class="btn" type="submit">Enviar Levantamento</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © <span id="ano"></span> Ramos Soluções Financeiras. Todos os direitos reservados.
+</footer>
+
+<script>
+  document.getElementById("ano").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
